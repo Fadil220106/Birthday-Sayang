@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Sayang 💖</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 60px;
+    font-size: 40px;
+}
+
+#pesan {
+    display: none;
+    font-size: 18px;
+    padding: 20px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin: auto;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #ff4d6d;
+    cursor: pointer;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: jatuh 5s linear infinite;
+}
+
+@keyframes jatuh {
+    0% { transform: translateY(-100px); }
+    100% { transform: translateY(100vh); }
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Happy Birthday Sayang 🎂💖</h1>
+
+<button onclick="tampilPesan()">Klik Aku 💕</button>
+
+<div id="pesan">
+    <p>Selamat ulang tahun ya sayang ❤️</p>
+
+    <p>Hari ini adalah hari spesial kamu, dan aku (Fadil) cuma mau bilang kalau aku benar-benar bersyukur banget bisa punya kamu di hidup aku 💖</p>
+
+    <p>Dari sekian banyak orang di dunia ini, aku dipertemukan sama kamu, dan itu jadi salah satu hal terbaik yang pernah terjadi dalam hidup aku ✨</p>
+
+    <p>Kamu selalu bisa bikin aku senyum, bikin aku tenang, dan jadi alasan kenapa aku tetap kuat sampai sekarang. Kehadiran kamu itu berarti banget buat aku 💕</p>
+
+    <p>Aku tahu kita gak selalu jalan di keadaan yang mudah, tapi aku selalu yakin kalau aku mau tetap sama kamu, jalan bareng kamu, pelan-pelan tapi pasti ❤️</p>
+
+    <p>Di ulang tahun kamu ini, aku berharap semua hal baik datang ke hidup kamu. Semoga kamu selalu sehat, bahagia, dan semua impian kamu bisa tercapai satu per satu 🌸</p>
+
+    <p>Terima kasih ya sayang sudah bertahan, sudah sabar, dan sudah sayang sama aku 💖</p>
+
+    <p><b>Dari aku, Fadil… aku sayang kamu hari ini, besok, dan seterusnya ❤️</b></p>
+</div>
+
+<script>
+function tampilPesan() {
+    document.getElementById("pesan").style.display = "block";
+}
+
+setInterval(function(){
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.fontSize = (10 + Math.random() * 20) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}, 300);
+</script>
+
+</body>
+</html>
